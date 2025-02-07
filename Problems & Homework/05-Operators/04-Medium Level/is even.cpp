@@ -15,9 +15,13 @@ int main() {
 	cin >> num;
 
 	// Is even using %2
-	bool is_even1 = !(num % 2);
+	bool is_even1 = !(num % 2 == 0);
 	cout << is_even1 << endl;
 
+	/*
+		note here (num % 2) only is a fault beacouse (-2 % 2) -> !true -> false
+		while it actually an even number 
+	*/
 	// Is even using /2
 	bool is_even2 = !(((double)num / 2.0 - num / 2) > 0);
 	cout << is_even2 << endl;
@@ -32,7 +36,9 @@ int main() {
 	cout << is_even3 << endl;
 
 	// another solution 
-	int last_digit = num % 10;	// even last digit is 0, 2, 4, 6, 8
+	int last_digit = num % 10;	
+	
+	// even last digit is 0, 2, 4, 6, 8
 	bool is_even3_2 = last_digit == 0 || last_digit == 2 || last_digit == 4 || last_digit == 6 || last_digit == 8;
 	cout << is_even3 << endl;
 
