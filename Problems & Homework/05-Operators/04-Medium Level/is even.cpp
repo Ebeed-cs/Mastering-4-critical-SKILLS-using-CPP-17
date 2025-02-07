@@ -15,11 +15,11 @@ int main() {
 	cin >> num;
 
 	// Is even using %2
-	bool is_even1 = !(num % 2 == 0);
+	bool is_even1 = (num % 2 == 0);
 	cout << is_even1 << endl;
 
 	/*
-		note here (num % 2) only is a fault beacouse (-2 % 2) -> !true -> false
+		note here !(num % 2) only is a fault beacouse !(-2 % 2) -> !true -> false
 		while it actually an even number 
 	*/
 	// Is even using /2
