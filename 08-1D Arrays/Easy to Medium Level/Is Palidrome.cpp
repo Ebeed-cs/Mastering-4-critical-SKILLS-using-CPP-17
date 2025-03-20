@@ -31,7 +31,7 @@ int main() {
 	int input;
 
 	if (N % 2 != 0)
-		cin >> input;
+		cin >> input; // regardless the midlle number
 
 	for (int j = N / 2 - 1; j >= 0; --j)
 	{
