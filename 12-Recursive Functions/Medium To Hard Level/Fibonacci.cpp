@@ -19,6 +19,10 @@ int fibonacci(int n) {
 	return arr[n] = fibonacci(n - 1) + fibonacci(n - 2);
 }
 
+/*
+	dynamic programming 
+		up function used only n nodes while the below use 2^(n + 1) nodes
+*/
 int fib(int n) {
 	if (n <= 1)
 		return 1;
