@@ -1,0 +1,476 @@
+#include <iostream>
+using namespace std;
+                                            // Library System "Ahmed inplementation "
+#define LIBRARY_BOOKS_NUM 20
+#define USER_COUNT 20
+#define BORROW_MAX 5
+
+struct Book {
+    int id;
+    string name;
+    int total_quantity;
+    int borrowed;
+
+    Book() = default;
+    // constructor initialization list 
+    Book(int new_id, string new_name, int new_total_quantity, int new_borrowed = 0) : id(new_id), name(new_name), total_quantity(new_total_quantity), borrowed(new_borrowed) {}
+};
+
+struct Library_books {
+    Book library_books[LIBRARY_BOOKS_NUM];
+    int id_sorted_indices[LIBRARY_BOOKS_NUM];
+    int name_sorted_indices[LIBRARY_BOOKS_NUM];
+
+    int count;
+
+    Library_books() {
+        count = 0;
+    }
+
+    bool is_Empty() {
+        return count == 0;
+    }
+
+    bool is_Full() {
+        return count == LIBRARY_BOOKS_NUM;
+    }
+
+    void shift_right(int index, int arr[]) {
+        for (int i = count; i > index; --i)
+            arr[i] = arr[i - 1];
+    }
+
+    void sort_indices_by_id(int id, string name, int total_quantity) {
+        if (is_Empty())
+            id_sorted_indices[0] = count;
+        else if (is_Full()) {
+            cout << "No place on the shilf" << endl;
+            count--;
+        }
+        else {
+            int i = 0;
+            for (; i < count; ++i)
+                if (library_books[id_sorted_indices[i]].id > id) {
+                    shift_right(i, id_sorted_indices);
+                    break;
+                }
+
+            id_sorted_indices[i] = count;
+        }
+    }
+
+    void sort_indices_by_name(int id, string name, int total_quantity) {
+        if (is_Empty())
+            name_sorted_indices[0] = count;
+        else if (is_Full()) {
+            cout << "No place on the shilf" << endl;
+            count--;
+        }
+        else {
+            int i = 0;
+            for (; i < count; ++i)
+                if (library_books[name_sorted_indices[i]].name > name) {
+                    shift_right(i, name_sorted_indices);
+                    break;
+                }
+
+            name_sorted_indices[i] = count;
+        }
+    }
+
+    void add_new(int id, string name, int total_quantity) {
+        sort_indices_by_id(id, name, total_quantity);
+        sort_indices_by_name(id, name, total_quantity);
+        if (count < LIBRARY_BOOKS_NUM)
+            library_books[count++] = Book(id, name, total_quantity);
+    }
+
+    void print_library(int sorted_by[]) {
+        for (int i = 0; i < count; ++i)
+            cout << " id = " << library_books[sorted_by[i]].id << " name = " << library_books[sorted_by[i]].name << " total_quantity " << library_books[sorted_by[i]].total_quantity << " borrowed " << library_books[sorted_by[i]].borrowed << endl;
+    }
+
+    bool starts_with(const string& word, const string& prefix) {
+        int prefix_length = prefix.length();
+        if (prefix_length > word.length())
+            return false;
+
+        for (int i = 0; i < prefix_length; ++i)
+            if (word[i] != prefix[i])
+                return false;
+
+        return true;
+    }
+
+    void search_by_prefix(string prefix) {
+        bool found = false;
+        for (int i = 0; i < count; ++i)
+            if (starts_with(library_books[name_sorted_indices[i]].name, prefix)) {
+                while (starts_with(library_books[name_sorted_indices[i]].name, prefix)) {
+                    cout << library_books[name_sorted_indices[i]].name << endl;
+                    found = true;
+                    i++;
+                }
+                break;
+            }
+
+        if (!found)
+            cout << "No books with such prefix" << endl;
+    }
+
+    void book_borrowed(string book_name) {
+        // Find the book in the name-sorted array
+        int name_index = -1;
+        for (int i = 0; i < count; ++i) {
+            if (library_books[name_sorted_indices[i]].name == book_name) {
+                name_index = name_sorted_indices[i];
+                break;
+            }
+        }
+
+        if (name_index == -1) {
+            cout << "Invalid book name" << endl;
+            return;
+        }
+
+        // Check if copies are available
+        if (library_books[name_index].total_quantity <= 0) {
+            cout << "No copies available for " << book_name << " right now" << endl;
+            return;
+        }
+
+        // Update the book data
+        library_books[name_index].borrowed++;
+        library_books[name_index].total_quantity--;
+    }
+};
+
+struct User {
+    int id;
+    string name;
+    int books_id[BORROW_MAX];
+    int borrow_count;
+    User() = default;
+    User(int new_id, string new_name) {
+        id = new_id;
+        name = new_name;
+        borrow_count = 0;
+    }
+
+    bool is_Empty() {
+        return borrow_count == 0;
+    }
+
+    bool is_Full() {
+        return borrow_count == BORROW_MAX;
+    }
+
+    bool borow_book(int book_id) {
+        if (is_Full()) {
+            cout << "no remaining borrow times " << endl;
+            return false;
+        }
+        if (is_Empty())
+            books_id[borrow_count] = book_id;
+        else {
+            int i = 0;
+            for (; i < borrow_count; ++i)
+                if (books_id[i] > book_id) {
+                    for (int j = borrow_count; j > i; --j)
+                        books_id[j] = books_id[j - 1];
+                    break;
+                }
+            books_id[i] = book_id;
+        }
+        borrow_count++;
+
+        return true;
+    }
+};
+
+struct User_info {
+    User user_info[USER_COUNT];
+    int count;
+
+    User_info() {
+        count = 0;
+    }
+
+    bool is_Empty() {
+        return count == 0;
+    }
+
+    bool is_Full() {
+        return count == USER_COUNT;
+    }
+
+    void add_new(int user_id, string user_name) {
+        if (is_Full())
+            cout << "no spaces to accept users" << endl;
+
+        else
+            user_info[count++] = User(user_id, user_name);
+    }
+
+    void print_our_user() {
+        if (is_Empty())
+            cout << "There aren't users yet" << endl;
+        else
+            for (int i = 0; i < count; ++i) {
+                cout << "user " << user_info[i].name << " id " << user_info[i].id << " borrowed books ids: ";
+                for (int j = 0; j < user_info[i].borrow_count; ++j)
+                    cout << user_info[i].books_id[j] << " ";
+                cout << endl;
+            }
+    }
+
+    int translate_book_name_to_id(string book_name, Library_books& library, int& book_index) {
+        int book_id = -1;
+        for (int i = 0; i < library.count; ++i)
+            if (library.library_books[library.name_sorted_indices[i]].name == book_name) {
+                book_id = library.library_books[library.name_sorted_indices[i]].id;
+                book_index = library.name_sorted_indices[i];
+                break;
+            }
+        if (book_id == -1)
+            cout << "the book not found" << endl;
+        return book_id;
+    }
+
+    bool user_borrow(string user_name, string book_name_borrowed, Library_books& library) {
+        int user_index = -1;
+        for (int i = 0; i < count; ++i) {
+            if (user_info[i].name == user_name) {
+                user_index = i;
+                break;
+            }
+        }
+
+        if (user_index == -1) {
+            cout << "User " << user_name << " not found!" << endl;
+            return false;
+        }
+        int book_index;
+
+        int book_id = translate_book_name_to_id(book_name_borrowed, library, book_index);
+
+        if ((book_id != -1) && (user_info[user_index].borow_book(book_id)))
+            return true;
+
+        return false;
+    }
+
+    void borrow_books_by_name(User_info users, int book_id) {
+        for (int i = 0; i < users.count; ++i) {
+            for (int j = 0; j < users.user_info[i].borrow_count; ++j) {
+                if (users.user_info[i].books_id[j] == book_id) {
+                    cout << users.user_info[i].name << endl;
+                    break;
+                }
+            }
+        }
+    }
+
+    void return_book(string user_name, int book_id) {
+        int user_index = -1;
+        for (int i = 0; i < count; ++i)
+            if (user_info[i].name == user_name) {
+                user_index = i;
+                break;
+            }
+        if (user_index == -1)
+            cout << "the user not found " << endl;
+        else {
+            int i = 0;
+            for (; i < user_info[user_index].borrow_count; ++i)
+                if (user_info[user_index].books_id[i] == book_id)
+                    break;
+            for (int j = i; j < user_info[user_index].borrow_count - 1; ++j)
+                user_info[user_index].books_id[j] = user_info[user_index].books_id[j + 1];
+            user_info[user_index].borrow_count--;
+        }
+    }
+};
+
+void add_book(Library_books& library) {
+    cout << "Enter book info: id & name & total quantity: ";
+    int id, total_quantity;
+    string name;
+
+    cin >> id >> name >> total_quantity;
+    library.add_new(id, name, total_quantity);
+}
+
+void search_books_by_prefix(Library_books& library) {
+    string prefix;
+    cout << "Enter book name prefix: ";
+    cin >> prefix;
+    library.search_by_prefix(prefix);
+}
+
+void print_who_borrowed_books_by_name(Library_books& library, User_info& users) {
+    string book_name;
+    cout << "Enter book name: ";
+    cin >> book_name;
+    int book_index;
+    int book_id = users.translate_book_name_to_id(book_name, library, book_index);
+    users.borrow_books_by_name(users, book_id);
+}
+
+void print_library_by_id(Library_books& library) {
+    library.print_library(library.id_sorted_indices);
+}
+
+void print_library_by_name(Library_books& library) {
+    library.print_library(library.name_sorted_indices);
+}
+
+
+void add_user(User_info& users) {
+    int id;
+    string name;
+    cout << "Enter user name & national id: ";
+    cin >> name >> id;
+    users.add_new(id, name);
+}
+
+void user_return_book(User_info& users, Library_books& library) {
+    string user_name, book_name;
+    cout << "Enter user name and book name: ";
+    cin >> user_name >> book_name;
+    int book_index = -1;
+    int book_id = users.translate_book_name_to_id(book_name, library, book_index);
+    users.return_book(user_name, book_id);
+    library.library_books[book_index].borrowed--;
+    library.library_books[book_index].total_quantity++;
+}
+
+void user_borrow_book(User_info& users, Library_books& library) {
+    string user_name, book_name;
+    cout << "Enter user name and book name: ";
+    cin >> user_name >> book_name;
+    if (users.user_borrow(user_name, book_name, library))
+        library.book_borrowed(book_name);
+}
+
+void menu() {
+    cout << "Library Menu: " << endl;
+    cout << "1) add book " << endl;
+    cout << "2) search_books_by_prefix " << endl;
+    cout << "3) print_who_borrowed_book_by_name " << endl;
+    cout << "4) print_library_by_id " << endl;
+    cout << "5) print_library_by_name " << endl;
+    cout << "6) add user " << endl;
+    cout << "7) user borrow book " << endl;
+    cout << "8) user return book " << endl;
+    cout << "9) print_users " << endl;
+    cout << "10) Exit " << endl;
+}
+
+void Library_System(Library_books& library, User_info& users) {
+    int choice;
+    menu();
+    while (true) {
+        cout << "Enter your menu choice [1 - 10]: ";
+        cin >> choice;
+        switch (choice) {
+        case 1:
+            add_book(library);
+            break;
+        case 2:
+            search_books_by_prefix(library);
+            break;
+        case 3:
+            print_who_borrowed_books_by_name(library, users);
+            break;
+        case 4:
+            print_library_by_id(library);
+            break;
+        case 5:
+            print_library_by_name(library);
+            break;
+        case 6:
+            add_user(users);
+            break;
+        case 7:
+            user_borrow_book(users, library);
+            break;
+        case 8:
+            user_return_book(users, library);
+            break;
+        case 9:
+            users.print_our_user();
+            break;
+        case 10:
+            return;
+        default:
+            cout << "not a valid cohice!" << endl;
+        }
+    }
+}
+
+int main() {
+    Library_books library;
+    User_info users;
+
+    Library_System(library, users);
+    return 0;
+}
+/*
+1
+100 math4 3
+1
+101 math2 5
+1
+102 math1 4
+1
+103 math3 2
+1
+201 prog1 5
+1
+201 prog2 3
+4
+5
+6
+mostafa 30301
+6
+ali 5051
+6
+noha 70701
+6
+ashraf 90901
+7
+mostafa math1
+7
+mostafa math2
+7
+mostafa math3
+7
+ali math1
+7
+ali math2
+7
+noha math1
+7
+noha math2
+4
+9
+2
+ma
+2
+pro
+2
+machine
+3
+math1
+3
+math2
+3
+machine
+4
+9
+8
+mostafa math1
+4
+9
+*/
