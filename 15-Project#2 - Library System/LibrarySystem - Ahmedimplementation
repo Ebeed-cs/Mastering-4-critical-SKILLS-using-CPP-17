@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-                                            // Library System "Ahmed inplementation "
+                                            // Library System "Ahmed implementation "
 #define LIBRARY_BOOKS_NUM 20
 #define USER_COUNT 20
 #define BORROW_MAX 5
