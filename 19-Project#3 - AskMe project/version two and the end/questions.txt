@@ -1,0 +1,8 @@
+101,0,3,Can we meet today?,ok iam free today
+102,2,3,how old are you?,6years old
+-2,114,3,2,hi there!,hi yassen
+-1,111,0,2,do you sleep now?,no i wake up
+103,1,2,how many of your brothers?
+104,0,1,was your exams finsihed?,not yet
+109,0,2,are you near now?
+110,4,3,Yassen. Iam Ahmed your brother,hello ahmed
