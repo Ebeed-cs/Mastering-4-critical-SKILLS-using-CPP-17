@@ -1,0 +1,5 @@
+101,0,3,Can we meet today?
+102,2,3,how old are you?
+103,1,2,how many of your brothers?
+104,0,1,was your exams finsihed?
+107,2,1,Hi Anas iam Asser!
