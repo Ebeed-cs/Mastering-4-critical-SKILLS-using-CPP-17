@@ -1,0 +1,6 @@
+/*
+	 * Each object variables will have different address in memory!
+	 *
+	 * However, function are common procedures
+	 * So only one function is loaded in memory with common address
+	 */
