@@ -44,6 +44,93 @@ This is **not just another C++ course** – it’s a **complete mastery program*
 
 ---
 
+---
+
+## 🧩 My Projects from the Course
+
+### 📘 Project 1: Hospital System Project
+Uncover the C++ Hospital System, a powerful project designed to simulate real-world healthcare operations. It manages 20 medical specializations, each with a 5-patient queue, providing structured control over patient admission and doctor interactions.
+
+**🛠️ Features:**
+- Multi-Specialization Handling:
+Supports up to 20 medical departments, each with a dedicated queue.
+
+- Queue Management:
+Efficient patient queuing with dynamic array shifting to manage:
+
+- Regular admissions
+
+- Urgent cases (prioritized at the front)
+
+- Doctor-Patient Interaction:
+Allows doctors to pick up patients from their specialization’s queue.
+
+- Patient Information Display:
+Neatly prints patient details per specialization, aiding system transparency.
+
+🔗 **[Demo Link](https://youtu.be/aw9oV1O3YEA)**
+
+---
+
+### 📗 Project 2: Library System Project
+A console-based application to manage books and users in a small-scale library. It features book search, sorted listings, borrowing/return tracking, and static-capacity storage using arrays.
+
+**🛠️ Features:**
+
+- **Console-Based Menu System**  
+  Interactive, menu-driven interface that continuously displays main options after each operation, streamlining admin navigation.
+
+- **Book Data Management**  
+  Allows admins to add books, each identified by a unique integer ID, name, and available copy count.
+
+- **Book Search by Name Prefix**  
+  Supports flexible book lookups using name prefixes (e.g., searching "Cpp" returns "CppHowToProgram", "CppForDummies").
+
+- **Sorted Book Listings**  
+  Enables listing all books sorted either by ID or alphabetically by name.
+
+- **User Data Management**  
+  Allows addition of users with unique integer IDs and names for tracking borrowing activity.
+
+- **Book Borrowing Functionality**  
+  Users can borrow books only if copies are available. The system reduces the quantity and records the loan per user.
+
+- **Book Return Handling**  
+  Increases the available quantity and removes the loan record when a user returns a borrowed book.
+
+- **Borrowed Book Inquiry**  
+  Admins can list all users who have borrowed a specific book by providing its name.
+
+- **User Overview with Borrowed Books**  
+  Displays all registered users with their IDs, names, and a sorted list of book IDs they have borrowed.
+
+- **Fixed Capacity Storage**  
+  Uses static-size arrays (e.g., MAX_BOOKS = 10, MAX_USERS = 10) to manage data, limiting the number of books and users the system can handle.
+
+🔗 **[Demo Link](https://youtu.be/YL3g0Osch2A)**
+
+---
+
+### 📙 Project 3: Ask Me Project
+A console-based question-and-answer system with persistent file storage, user authentication, threaded discussions, and smart data handling using STL.
+
+**🛠️ Features:**
+- Persistent storage via `users.txt` and `questions.txt`  
+- Sign Up / Login / Sign Out with username-based lookups using `std::map`  
+- Ask/answer questions with support for anonymity and user preferences  
+- Threaded conversation model with reply chains  
+- View questions: received, sent, or all answered feed  
+- Delete own questions, including entire thread if parent is removed  
+- Unique IDs for users and questions  
+- Strong input validation and error handling  
+- Efficient data structures: `std::map` and `std::vector`  
+- Acknowledged limitation: concurrent ID conflicts in parallel sessions
+
+🔗 **[Demo Link](https://youtu.be/CVA3948iE2A)**
+
+
+---
+
 ## 🔥 Why This Course?
 ✅ **7X More Practice** than traditional courses  
 ✅ **Not Just Learning – You Build & Solve!**  
