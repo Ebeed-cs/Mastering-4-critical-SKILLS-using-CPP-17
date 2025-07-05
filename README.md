@@ -112,19 +112,38 @@ A console-based application to manage books and users in a small-scale library. 
 ---
 
 ### 📙 Project 3: Ask Me Project
-A console-based question-and-answer system with persistent file storage, user authentication, threaded discussions, and smart data handling using STL.
+A terminal-based Q&A system with file persistence, user authentication, threaded discussions, and STL-based data management.
 
 **🛠️ Features:**
-- Persistent storage via `users.txt` and `questions.txt`  
-- Sign Up / Login / Sign Out with username-based lookups using `std::map`  
-- Ask/answer questions with support for anonymity and user preferences  
-- Threaded conversation model with reply chains  
-- View questions: received, sent, or all answered feed  
-- Delete own questions, including entire thread if parent is removed  
-- Unique IDs for users and questions  
-- Strong input validation and error handling  
-- Efficient data structures: `std::map` and `std::vector`  
-- Acknowledged limitation: concurrent ID conflicts in parallel sessions
+- **Persistent Data Storage:**  
+  Stores users and questions in `users.txt` and `questions.txt`, auto-loaded and saved using helper functions.
+
+- **User Authentication & Management:**  
+  Supports Sign Up, Login, and Sign Out with full user info and anonymous-question option. Users stored in `std::map` for fast access.
+
+- **Question & Answer Functionality:**  
+  Users can ask/answer targeted questions (anonymously or not), respecting recipient settings.
+
+- **Threaded Conversation Model:**  
+  Supports nested replies with parent-child relationships using `std::map<int, std::vector<int>>`.
+
+- **Comprehensive Views:**  
+  View questions "To You", "From You", and global answered question feed.
+
+- **Thread-Aware Deletion:**  
+  Users can delete their own questions. Deleting a parent question removes the entire thread.
+
+- **Unique ID Generation:**  
+  Each user and question has a unique ID for efficient tracking and referencing.
+
+- **Robust Input Validation:**  
+  Ensures safe inputs and prevents unauthorized actions (e.g., deleting others’ questions).
+
+- **Efficient STL Usage:**  
+  Uses `std::map` and `std::vector` for scalable, fast data operations (O(log N)).
+
+- **Concurrency Limitation (Acknowledged):**  
+  Parallel users may receive same IDs due to non-thread-safe generation — noted for future improvement.
 
 🔗 **[Demo Link](https://youtu.be/CVA3948iE2A)**
 
