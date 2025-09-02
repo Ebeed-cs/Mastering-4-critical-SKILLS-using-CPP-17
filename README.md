@@ -44,8 +44,6 @@ This is **not just another C++ course** – it’s a **complete mastery program*
 
 ---
 
----
-
 ## 🧩 My Projects from the Course
 
 ### 📘 Project 1: Hospital System Project
@@ -147,6 +145,54 @@ A terminal-based Q&A system with file persistence, user authentication, threaded
 
 🔗 **[Demo Link](https://youtu.be/CVA3948iE2A)**
 
+
+---
+
+### 📕 Project 4: OOing AskMe System Project
+A complete object-oriented refactoring of the original AskMe system, transforming struct-based procedural code into a fully encapsulated, modular architecture. This advanced Q&A platform demonstrates professional OOP principles while maintaining all original functionality with significantly improved maintainability and extensibility.
+
+**🛠️ Features:**
+
+- **Complete OOP Architecture Transformation:**  
+  Full refactoring from struct-based design to proper class hierarchies with strict private/public encapsulation, eliminating procedural dependencies and implementing clean object-oriented design patterns.
+
+- **Multi-Manager Class System:**  
+  Implements specialized manager classes (`UsersManager`, `QuestionsManager`) alongside core entities (`User`, `Question`), each with single responsibility and minimal coupling for maximum maintainability.
+
+- **Advanced Threaded Discussion Architecture:**  
+  Sophisticated conversation threading using `std::map<Question*, std::vector<Question*>>` for efficient parent-child relationships, supporting unlimited nested replies with O(log N) access complexity.
+
+- **Encapsulated User Management System:**  
+  Complete user lifecycle with private data members, controlled access through getters, authentication validation, and configurable privacy settings for anonymous question handling.
+
+- **Object-Oriented File Persistence:**  
+  Dedicated file I/O operations encapsulated within manager classes, maintaining data integrity across sessions with automatic loading/saving and proper error handling.
+
+- **Professional Memory Management:**  
+  Robust constructor/destructor implementation with RAII principles, dynamic memory allocation for scalable collections, and proper cleanup to prevent memory leaks.
+
+- **Enhanced Input Validation & Safety:**  
+  Comprehensive bounds checking, null pointer validation, user permission verification, and graceful error recovery with informative feedback messages.
+
+- **Modular File Architecture:**  
+  Clean separation across multiple files with organized namespaces (`inAndOutFiles`, `Utils`), proper header guards, and logical component grouping for professional codebase structure.
+
+- **Const-Correct Implementation:**  
+  Extensive use of const parameters and methods where data shouldn't be modified, following modern C++ best practices for compile-time safety and optimization.
+
+- **View-Model Separation:**  
+  Clear architectural distinction between business logic (model classes) and presentation layer (display methods), implementing MVC-like patterns for better code organization.
+
+- **STL-Driven Data Management:**  
+  Heavy utilization of Standard Template Library containers with proper iterators, algorithms, and modern C++ idioms for efficient and readable code.
+
+- **Intelligent ID Generation System:**  
+  Smart auto-incrementing identifier system that parses existing file data to generate unique IDs for users and questions, preventing conflicts and maintaining data consistency.
+
+- **Thread-Safe Design Foundation:**  
+  Architecture designed with future concurrency in mind, using proper encapsulation and access patterns that can easily accommodate multi-threading enhancements.
+
+🔗 **[Demo Link](https://youtu.be/7YtzbhBO2TE)**
 
 ---
 
