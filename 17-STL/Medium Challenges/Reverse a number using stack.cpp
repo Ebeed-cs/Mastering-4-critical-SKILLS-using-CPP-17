@@ -2,15 +2,6 @@
 #include <stack>
 using namespace std;
 
-/*
-                    Reverse a number using stack
-
-                ● Implement a method that takes number >= 0 and reverse its digits using a stack
-                ● int reverse_num(int num)
-                ● E.g. Input: 1234, Output: 4321
-
-*/
-
 int reverse_num(int num) {
 	if (num == 0)
 		return 0;
