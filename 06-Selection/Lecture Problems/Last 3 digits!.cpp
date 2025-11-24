@@ -1,16 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-		Last 3 digits!
-	Read an integer and do the following:
-		- if number < 10000, say this is a small number
-		- otherwise Sum the last 3 digits of the number
-			- if the Sum is odd, say this is a greater number
-			- otherwise, if sum is even:
-				- if any digit of the last 3 is odd, say this is a good number
-				- otherwise, say this is a bad number 
-*/
 
 int main() {
 	int num;
