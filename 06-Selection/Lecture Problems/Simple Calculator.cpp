@@ -1,9 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-	Simple Calculator
-*/
 
 int main() {
 	int num1, num2;
