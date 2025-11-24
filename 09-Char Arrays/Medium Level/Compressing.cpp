@@ -1,18 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/*
-                       Compressing
-
-    ● Read a string of letters and then compress each group of same letter
-        ○ E.g. if the sub-string is cccc ⇒ c4
-        ○ Use _ between each group
-
-    ● Input ⇒ Outputs
-        ○ ccccDDDxxxxxxxxe ⇒ c4_D3_x8_e1
-        ○ xxxxxxxx ⇒ x8
-
-*/
 
 int main() {
     string input;
