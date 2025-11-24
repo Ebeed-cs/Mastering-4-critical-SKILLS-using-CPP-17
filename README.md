@@ -195,12 +195,81 @@ A complete object-oriented refactoring of the original AskMe system, transformin
 🔗 **[Demo Link](https://youtu.be/7YtzbhBO2TE)**
 
 ---
+### 📘 Project 5: Expedia-Style Booking System (Advanced OOP, UML & System Design)
+A large-scale, production-style travel booking system built in Modern C++ (C++17).  
+This is the most advanced project in the series — **2000+ lines**, full **OOP architecture**, **UML-driven design**, **real-world workflows**, and **multi-service integrations** inspired by platforms like Expedia.
+
+This project pushes engineering skills beyond syntax exercises into real **system design**, **API abstraction**, **architecture thinking**, and **scalability**.
+
+
+## 🛠️ Features
+
+### 🌍 **Real-World Functional Domains**
+- **Flight Booking Integrations:**  
+  AirCanadaOnlineAPI, TurkishAirlinesOnlineAPI  
+  Supports full search → filter → select → reserve workflow.
+
+- **Hotel Booking Integrations:**  
+  Hilton, Marriott  
+  Complete listing, filtering, and reservation pipeline.
+
+
+### 👤 **User & Payment Infrastructure**
+- Secure authentication & session management  
+- User profile handling  
+- Payment module with masked card display  
+- Strong validation & clean workflow control
+
+
+### ⚙️ **Atomic Transaction System**
+Guarantees **all-or-nothing** booking consistency across flights + hotels.  
+Prevents corrupted, partial, or inconsistent reservations—critical for multi-service systems.
+
+
+### 🏗️ **Architecture (OOP + UML)**  
+- Fully **UML-driven** modeling and design  
+- Interface-based scalability  
+- Strict **Single Responsibility Principle (SRP)**  
+- Clean separation of concerns between booking, payment, users, and API layers
+
+
+### 🧩 **Design Patterns Implemented**
+- **Adapter Pattern** – unify external APIs under one interface  
+- **Template Method** – define shared reservation steps  
+- **Prototype Pattern** – cloneable booking objects  
+- **Manager / Facade Pattern** – orchestrates high-level system operations
+
+
+### 🔗 **JSON & API Backbone**
+- Uses full JSON parser (`json.hpp`)  
+- Structured JSON requests/responses for all API interactions  
+- Clean mapping between data, domain, and parsing layers
+
+
+## 🖼️ UML Diagram    
+![Expedia_UML](https://github.com/user-attachments/assets/2bdd3236-1ec9-4e51-beef-4ddac4e9ba79)
+
+
+## 🔗 Demo  
+**[Demo Link](https://youtu.be/2RhSnndd2tE)**
+
+---
+
 
 ## 🔥 Why This Course?
 ✅ **7X More Practice** than traditional courses  
 ✅ **Not Just Learning – You Build & Solve!**  
 ✅ **Perfect for Competitive Programmers & Software Engineers**  
 ✅ **Clear, Structured, and Short Lectures for Easy Learning**  
+
+---
+
+## 🎓 Course Certificate  
+🟦 **Udemy Certificate:**  
+<img width="1600" height="1190" alt="image" src="https://github.com/user-attachments/assets/cb1f65cb-c131-431d-b44e-bfdc153bc1bf" />
+
+
+---
 
 ## ⭐ Support
 If you find this repository helpful, star ⭐ it and share it with others!
