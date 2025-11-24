@@ -1,22 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-				Special Average
-	● Read integer N, followed by reading N numbers. Print 2 values
-		○ The average of the numbers in odd positions (1st, 3rd, 5th, …)
-		○ The average of the numbers in even positions (2nd, 4th, 6th, …)
-
-	● Input
-		○ 6 10 100 20 200 30 600
-	● Output
-		○ 20  300
-	● Explantation
-		○ (10+20+30)/3 = 20
-		○ (100+200+600)/3 = 300
-
-*/
-
 int main() {
 	int N, input , count;
 	double even_num, odd_num; // 'double' if the average is a floating number
