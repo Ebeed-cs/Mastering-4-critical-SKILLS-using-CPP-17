@@ -1,11 +1,6 @@
 #include <iostream>
 using namespace std;
-/*
-            NxN tic-tac-toe - 1
 
-    Read integer N for the dimension of tic-tac-toe (3 <= N <= 9). Then run a game of 2 users who keep playing till one of them wins or tie. Print the grid
-    after each round. Checkout below
-*/
 int main() {
 	// 0 empty, 1 = x, 2 = o
 	int grid[100][100] = { 0 };
