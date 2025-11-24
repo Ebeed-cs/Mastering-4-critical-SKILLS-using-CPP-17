@@ -2,17 +2,6 @@
 using namespace std;
 
 /*                                              // approach 1 'with three loops'
-                    longest subarray
-
-        Read integer N (< 1000) then N read numbers each is either 0 or 1.
-        ● Find the longest subarray with number of zeros = numbers of ones
-            ○ You can easily implement it using 3 loops
-            ○ Or with little thinking using 2 loops (even with no extra arrays)
-            ○ Hard: You can implement it without any nested loops
-        ● Inputs ⇒ outputs
-            ○ 7 1 0 0 0 1 1 1 ⇒ 6 (e.g. 100011 or 000111)
-            ○ 19 1 0 0 0 0 0 1 0 1 1 0 1 0 0 0 0 0 0 1 ⇒ 8 (e.g. 00101101)
-
 */
 
 int main() {
