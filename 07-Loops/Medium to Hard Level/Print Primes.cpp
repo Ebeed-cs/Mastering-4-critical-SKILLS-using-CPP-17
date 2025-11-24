@@ -2,19 +2,6 @@
 #include <cmath>
 using namespace std;
 
-/*
-							Print Primes
-
-	● Read integer N (<500), then print all prime numbers <= N
-		○ Output should be comma separated, as below
-			■ Don’t print comma after the last number
-	● Input ⇒ Output
-		○ 18 ⇒ 2,3,5,7,11,13,17
-			■ No comma after last number!
-
-
-*/
-
 int main() {
 	int N;
 	cin >> N;
