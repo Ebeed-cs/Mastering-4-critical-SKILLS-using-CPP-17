@@ -1,12 +1,6 @@
 #include <iostream>
 using namespace std;
-/*
-	   Is Palindrome - 1
 
-	● Implement a function that decides if array is palindrome or not
-	● Define its signature
-
-*/
 
 bool isPalindromeRecursive(int arr[], int start, int end) {
 	// Base case: empty array or single element is palindrome
