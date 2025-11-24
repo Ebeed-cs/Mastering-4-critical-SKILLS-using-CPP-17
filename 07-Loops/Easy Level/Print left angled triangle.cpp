@@ -1,17 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-				Print left angled triangle
-		Read integer N, then print a left angled triangle that has N rows as below:
-			5
-			*
-			**
-			***
-			****
-			*****
-
-*/
 
 int main() {
 	int x;
