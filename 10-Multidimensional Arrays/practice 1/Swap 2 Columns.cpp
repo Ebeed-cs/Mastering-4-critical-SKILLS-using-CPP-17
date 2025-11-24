@@ -1,22 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/*
-                                    Swap 2 columns
-
-        ● Read integers N, M, then Read matrix NxM. Then read 2 indices of columns. Swap the 2 columns together. Print the new matrix.
-
-        ● Input: 3 4
-            ○ 8 16 9 52
-            ○ 3 15 27 6
-            ○ 14 25 2 10
-            ○ 0 3
-        ● Output
-            ○ 52 16 9 8
-            ○ 6 15 27 3
-            ○ 10 25 2 14
-*/
-
 int main() {
     int row, col;
     cin >> row >> col;
