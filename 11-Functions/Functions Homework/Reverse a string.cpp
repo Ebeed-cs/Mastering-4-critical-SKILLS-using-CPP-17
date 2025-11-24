@@ -1,12 +1,6 @@
 #include <iostream>
 using namespace std;
-/*
-             Reverse a string
 
-    ● Develop a function that do reverse for the string. Function is:
-    ● string reverse_str(const string & str);
-        ○ Don’t try to change str content or you will get compilation error
-*/
 
 string reverse_str(const string& str) {
     int len = str.length();
