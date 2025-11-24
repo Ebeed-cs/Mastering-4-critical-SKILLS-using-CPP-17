@@ -1,24 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/*
-                        Is Suffix?
-    ● Read 2 strings input and str. Print YES if the given str is a suffix for the string.
-                    Otherwise, print NO
-
-    ● Input ⇒ Outputs
-        ○ ABCDEFG ABCD ⇒ NO
-        ○ ABCDEFG ABCDEF ⇒ NO
-        ○ ABCDEFG EFG ⇒ YES
-        ○ ABCDEFG DEFG ⇒ YES
-        ○ ABCDEFG BCD ⇒ NO
-        ○ ABCDEFG DEF ⇒ NO
-        ○ ABCDEFG ACEG ⇒ NO
-        ○ ABCDEFG DG ⇒ NO
-        ○ ABCDEFG GD ⇒ NO
-        ○ ABCDEFG ABCDEFG ⇒ YES
-
-*/
 
 int main() {
     string input, str;
