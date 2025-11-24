@@ -1,17 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-
-				Smallest pair
-
-		● Given a number N (<= 200) and an array A of N numbers.
-		● Print the smallest possible result of A[i] + A[j] + j - i , where 1  ≤  i < j  ≤  N.
-
-		● Input ⇒ Output
-			○ 4   20 1 9 4    ⇒     7
-
-*/
 
 int main() {
 	int N;
