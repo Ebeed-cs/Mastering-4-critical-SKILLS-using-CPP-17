@@ -1,17 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-				Find most frequent number
-
-	● Read an Integer N, then read N <= 200 integers. Find the value that repeated the most number of times.
-			○ Each integer is 0 <= integer <= 150
-	● Example for array: 1 2 1 3 1 5 5
-			 1 repeated 3 times
-
-
-*/
-
 int main() {
 	int n, numbers[200];
 
