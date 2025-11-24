@@ -1,7 +1,6 @@
 #include<iostream>
 #include<queue>
 using namespace std;
-														// ReWrite the Hospital System V3 Using STL
 // Global variables
 const int MAX_SPECIALIZATION = 20;
 
