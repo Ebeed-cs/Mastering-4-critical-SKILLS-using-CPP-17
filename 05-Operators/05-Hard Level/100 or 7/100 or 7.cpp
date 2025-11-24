@@ -1,15 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-
-	100 or 7?
- ● Write a program that reads an integer and print 100 if number is even or 7 if number is odd
- ○ E.g. for input 8 ⇒ 100
- ○ E.g. for input 133 ⇒ 7
-
-
-*/
 
 int main() {
 	int num;
