@@ -1,13 +1,5 @@
 #include <iostream>
 using namespace std;
-/*
-        Array maximum - 2
-
-    ● int arr_max(int arr[], int len);
-    ● Write a function that computes array maximum
-    ● Input 1, 8, 2, 10, 3 ⇒ 10
-
-*/
 
 int arr_max(int arr[], int len) {
     if (len == 1) return arr[0];
