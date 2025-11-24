@@ -1,8 +1,6 @@
 #include<iostream>
 using namespace std;
-/*
-	Minimum of three variables
-*/
+
 
 int main() {
 
