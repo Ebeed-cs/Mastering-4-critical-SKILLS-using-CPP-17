@@ -1,17 +1,6 @@
 #include <iostream>
 using namespace std;
-/*
-            Get nth-prime
 
-    ● Implement the following 2 functions:
-    ● bool is_prime(int num);
-        ○ Return true if number is prime
-    ● Int nth_prime(int n);
-        ○ Return the n-th prime number. It should use is_prime function
-        ○ E.g nth_prime(6) = 13
-            ■ Recall: 2, 3, 5, 7, 11, 13, 17, 19
-
-*/
 bool is_prime(int n) {
     if (n <= 1) return false;
     if (n <= 3) return true;
