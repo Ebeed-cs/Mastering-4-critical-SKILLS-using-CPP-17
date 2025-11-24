@@ -1,24 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/*
-                Smaller row?
-
-    ● Read integers N, M, then Read matrix NxM. Then read Q for Q queries.
-    ● Each query is 2 integers: first and 2nd row indices (1-based)
-    ● Compare the 2 rows and print YES if first row < 2nd for all the row values
-
-    ● Input ⇒ Output
-        ○ 3 4
-        ○ 8 16 9 52
-        ○ 3 15 27 6
-        ○ 14 25 29 10
-        ○ 3
-        ○ 1 2 ⇒ NO
-        ○ 2 3 ⇒ YES
-        ○ 1 3 ⇒ NO
-
-*/
 
 int main() {
     int row, col;
