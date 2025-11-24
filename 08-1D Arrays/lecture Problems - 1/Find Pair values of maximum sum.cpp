@@ -1,15 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-						Find pair values of maximum sum
-
- 	● Read an Integer N, then read N <= 200 (distinct) integers. Find a pair of numbers (e.g. 2 different indices) whose sum is maximum
- 
-	● Input: 5  2 10 3 50 15            ⇒ 65         (from 50 + 15)
-
-
-*/
 
 int main() {
 	int n, numbers[200];
