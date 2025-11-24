@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 /*
@@ -15,7 +15,8 @@ using namespace std;
 
 */
 
-int main() {
+int main()
+{
 	int N, i, count, col;
 	count = 0;
 	bool decrement = false;
@@ -24,13 +25,13 @@ int main() {
 	while (count < 2 * N)
 	{
 
-		if(!decrement)
+		if (!decrement)
 			i = count;
 		count++;
 
-		if(decrement)
+		if (decrement)
 		{
-			i = down --;
+			i = down--;
 		}
 
 		if (N == i)
@@ -38,7 +39,7 @@ int main() {
 			i = count - 2;
 			decrement = true;
 		}
-		
+
 		col = N * 2 - 1;
 		while (col > 0)
 		{

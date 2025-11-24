@@ -44,4 +44,3 @@ int main() {
     cout << "Average grade is " << (st_grade1 + st_grade2) / 2 << endl;
     return 0;
 }
-
