@@ -1,19 +1,7 @@
 #include<iostream>
 using namespace std;
 								// Approach 2
-/*
 
-				Pair of numbers
-
-	● Read N, M, SUM. Find all pairs that has A + B == SUM where
-		○ 1 <= A <= N
-		○ 1 <= B <= M
-
-	● Try input
-		○ 1000000 1000000 1000000
-		○ How many steps the code do?
-
-*/
 
 int main() {
 	int N, M, sum, count = 0;
