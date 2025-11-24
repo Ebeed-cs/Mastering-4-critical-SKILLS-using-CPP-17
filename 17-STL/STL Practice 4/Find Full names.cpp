@@ -3,30 +3,6 @@
 #include <map>
 using namespace std;
 
-/*
-                Find full names
-            
-            ● Given N full-names as following
-                ○ Each full name name starts with number K: # of words,
-                ○ Then read K words
-            ● Input
-                ○ 5 [5 full names]
-                ○ 3 mostafa saad ibrahim [3 for 3 names: first, second, third names]
-                ○ 3 mostafa saad ali
-                ○ 3 asmaa talaat morsi
-                ○ 2 asmaa ashraf
-                ○ 4 mostafa saad ibrahim mohamed
-
-            ● Then read Q for Q queries. Each query is a sub-full name
-                ○ E.g. again per sub-full name: k, then k words
-            ● Print all full names start with this sub-full name
-            ● Input
-                ○ 3 [3 queries]
-                ○ 2 mostafa saad ⇒ [mostafa saad ibrahim, mostafa saad ali, mostafa saad ibrahim mohamed]
-                ○ 1 asmaa ⇒ [asmaa talaat morsi, asmaa ashraf]
-                ○ 3 mostafa saad ibrahim ⇒ [mostafa saad ibrahim, mostafa saad ibrahim mohamed]
-*/
-
 int main() {
 	map<string, vector<string>> mp;
 
