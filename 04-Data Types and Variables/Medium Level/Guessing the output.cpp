@@ -1,4 +1,3 @@
-// Guess the Output
 
 
 #include<iostream>
