@@ -1,11 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-	Guess the output1
-	to know the prcedence order go to : https://en.cppreference.com/w/cpp/language/operator_precedence
-*/
-
 int main() {
 
 	int a = 10, b = 20, c = 30, d = 40;
