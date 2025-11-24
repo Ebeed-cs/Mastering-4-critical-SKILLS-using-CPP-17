@@ -1,17 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/*                  
-                Greedy Robot - 1
-
-        ● Read integers N, M, then Read matrix NxM. All values are distinct.
-        ● A robot starts at cell (0, 0).
-        ● Take the value in the current cell and moves.
-        ● It can move only one step to either: Right, Bottom or the diagonal.
-        ● It always selects the cell that has maximum value.
-        ● Print the total values the robot collects
-
-*/
 
 int main() {
     int row, col;
