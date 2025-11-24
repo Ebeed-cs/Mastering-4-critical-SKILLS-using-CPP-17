@@ -1,24 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/*
-                Transpose
-
-    ● Read integers N, M, then Read matrix NxM. Compute another array, the transpose
-
-    3 4
-    8 16 9 52
-    3 15 27 6
-    14 25 29 10
-
-    output
-    8 3 14
-    16 15 25
-    9 27 29
-    52 6 10
-
-*/
-
 int main() {
 	int arr1[100][100];
 	int arr2[100][100];
