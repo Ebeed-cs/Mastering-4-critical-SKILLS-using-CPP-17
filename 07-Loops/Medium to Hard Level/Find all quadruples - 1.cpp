@@ -1,18 +1,5 @@
 #include<iostream>
 using namespace std;
-/*
-							Find all quadruples
-
-		● Count how many (a, b, c, d) with following property:
-			○ 1 <= (a, b, c, d) <= 200
-			○ a + b = c + d
-		● Code it once using 4 loops
-			○ How much time does it take!
-		● Code it once using 3 loops only
-
-
-
-*/
 
 int main() {
 	int count = 0;
