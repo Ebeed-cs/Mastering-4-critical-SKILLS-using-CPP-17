@@ -1,19 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/*
-
-						Print diamond
-	● Read an integer N, then print diamond of 2N rows as below:
-		3
-			*
-		   ***
-		  *****
-		  *****
-		   ***
-			*
-
-*/
 
 int main()
 {
