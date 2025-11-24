@@ -1,13 +1,6 @@
 #include <iostream>
 using namespace std;
-/*
-        Prefix Sum 
 
-	● Write a function that sums only the first N elements in an array.
-	● Define its signature
-	● Input [1, 3, 4, 6, 7], 3 ⇒ 8 (1+3+4)
-
-*/
 
 int prefix_sum_v1(int arr[], int len, int cnt) {
 	if (cnt == 0)
