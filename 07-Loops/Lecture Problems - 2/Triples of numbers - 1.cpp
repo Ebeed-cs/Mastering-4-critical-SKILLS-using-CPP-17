@@ -2,12 +2,6 @@
 using namespace std;
 /*									Approach 1
 
-				Triples of numbers
-
-	● Read N, M, W. Find all triples that has A + B <= C where 
-		○ 1 <= A <= N 
-		○ A <= B <= M	
-		○ 1 <= C <= W
 
 
 */
