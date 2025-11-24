@@ -1,9 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-	Guess the output2
-*/
 
 int main() {
 
