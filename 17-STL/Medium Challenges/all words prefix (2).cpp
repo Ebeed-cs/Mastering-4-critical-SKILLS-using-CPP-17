@@ -3,23 +3,6 @@
 #include <map>
 using namespace std;
 
-/*
-                    all words prefix (2)
-
-                    ● Given N, read N (!unique) strings. Then Read Q queries, for each query: print all strings that start with this prefix.Print them ordered no duplicate.
-                    ● 5
-                        ○ mostafa
-                        ○ morad
-                        ○ nawal
-                        ○ marwa
-                        ○ mostafa
-                    ● 4
-                        ○ m => [marwa morad mostafa]
-                        ○ mo => [morad mostafa]
-                        ○ mos => [mostafa]
-                        ○ naw => [nawal]
-
-*/
 
 int main() {
 
