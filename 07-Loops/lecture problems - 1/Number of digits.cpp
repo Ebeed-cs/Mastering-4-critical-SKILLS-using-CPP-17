@@ -1,15 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/*
-
-	  Number of digits
-	● Read a C++ integer and count its number of digits
-	● There are 2 bugs in this code
-		○ Find 2 test cases to find them!
-
-*/
-
 int main() {
 	int x, count = 0;
 	cin >> x;
