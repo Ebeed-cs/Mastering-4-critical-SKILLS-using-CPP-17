@@ -1,14 +1,6 @@
 #include <iostream>
 using namespace std;
-/*
-	   Is prefix
 
-	● bool is_prefix(string main, string prefix, int start_pos = 0)
-	● E.g. is_prefix(“abcdefgh”, “abcd”) ⇒ true
-	● E.g. is_prefix(“abcdefgh”, “”) ⇒ true
-	● E.g. is_prefix(“abcdefgh”, “abd”) ⇒ false
-
-*/
 
 bool is_prefix(string main, string prefix, int start_pos = 0) {
 	if (start_pos >= prefix.length()) return true;
