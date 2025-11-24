@@ -1,18 +1,5 @@
 #include<iostream>
 using namespace std;
-/*
-			Printing X
-
-		● Read an Integer N, then print an X using * as following
-			○ N always odd
-				5
-				*   *
-				 * *
-                  *
- 			     * *
-				*   *
-
-*/
 
 int main() {
 	int n;
