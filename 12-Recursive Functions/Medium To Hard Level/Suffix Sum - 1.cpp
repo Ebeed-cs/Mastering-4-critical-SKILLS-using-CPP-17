@@ -1,13 +1,6 @@
 #include <iostream>
 using namespace std;
-/*
-        Suffix Sum - 1
 
-    ● Write a function that sums only the last N elements in an array.
-    ● Define its signature
-    ● Input [1, 3, 4, 6, 7], 3 ⇒ 17 (4+6+7)
-
-*/
 
 int sufix_sum(int arr[], int len, int sum_last_N = 0) {
     if (sum_last_N)
