@@ -4,11 +4,6 @@
 #include <set>
 #include <assert.h>
 using namespace std;
-								// rewrie the library system using the STL 
-
-// then here we update with the set to more sort and insert and more faster 
-// used vectors to dynamic allocation 
-// used ranged for loop to more easier and cleaner
 
 const int MAX_BOOKS = 10;
 const int MAX_USERS = 10;
