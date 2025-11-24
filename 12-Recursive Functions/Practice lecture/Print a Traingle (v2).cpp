@@ -1,15 +1,6 @@
 #include <iostream>
 using namespace std;
-/*
-        Print a traingle (v2)
 
-    5
-    *
-    **
-    ***
-    ****
-    *****
-*/
 
 void draw_traingle(int n)
 {
