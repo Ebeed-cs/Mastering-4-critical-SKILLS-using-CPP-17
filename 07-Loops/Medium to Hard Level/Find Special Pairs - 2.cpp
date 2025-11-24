@@ -2,18 +2,6 @@
 using namespace std;
 /*
 							Appoach 2
-			Find Special Pairs
-
-		● Count How many X, Y numbers such that
-			○ X in range [50-300]
-			○ Y in range [70-400]
-			○ X < Y
-			○ (X+Y) divisible by 7
-
-		● Output
-			○ 8040
-
-
 */
 
 int main() {
